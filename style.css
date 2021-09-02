@@ -1,0 +1,68 @@
+body {
+    background: #121212;
+}
+
+div {
+    text-align: center;
+    flex-wrap: wrap;
+    margin-top: 2%;
+}
+
+#header {
+    margin-top: 0;
+    padding: 5px;
+    background: navy;
+    color: whitesmoke;
+}
+
+#divNums,
+#divSeparador,
+#divMsj,
+#botones {
+    margin-top: 1%;
+}
+
+#numeros,
+#separador,
+#mensaje {
+    background: #212529;
+    color: #fff;
+}
+
+label {
+    color: #fff;
+    font-weight: 700;
+}
+
+#mensaje {
+    width: inherit;
+    height: 200px;
+}
+
+#links-cont {
+    margin-top: 1%;
+}
+
+#links {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.linkLista {
+    margin: 2px;
+    cursor: crosshair;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.form-floating>label {
+    padding: 1rem 1rem;
+}
+
+#generar,
+#resetear {
+    cursor: crosshair;
+}
