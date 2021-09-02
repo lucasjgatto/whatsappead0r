@@ -4,38 +4,29 @@ let inputMensaje = document.querySelector("#mensaje");
 
 let listaLinks = document.querySelector("#links");
 
-let botonGenerar = document.querySelector("#generar")
-let botonResetear = document.querySelector("#resetear")
+let btnGenerar = document.querySelector("#generar")
+let btnResetear = document.querySelector("#resetear")
 
-// const linkUno = "https://api.whatsapp.com/send/?phone=54"
-const linkUno = "https://wa.me/549"
-const linkDos = "?text="
-    // const linkTres = "&app_absent=0"
-
-let wN = 1
+const urlUno = "https://wa.me/549"
+const urlDos = "?text="
 
 function resetear() {
     listaLinks.innerHTML = ""
 }
 
-botonGenerar.onclick = function() {
-    // console.log(inputNumeros.value.split(inputSeparador.value))
-
+btnGenerar.onclick = function() {
     let arrayNumeros = inputNumeros.value.split(inputSeparador.value)
     if (arrayNumeros.length > 1) {
         resetear()
         for (const numero of arrayNumeros) {
-            // console.log(linkUno + numero + linkDos + inputMensaje.value + linkTres)
             console.log(numero.length)
             if (numero.length > 0) {
                 listaLinks.innerHTML += `<button class="linkLista btn btn-dark" id="${numero}">
-            <a target="_blank" href="${linkUno + numero + linkDos + encodeURIComponent(inputMensaje.value)}">${numero}</a>
+            <a target="_blank" href="${urlUno + numero + urlDos + encodeURIComponent(inputMensaje.value)}">${numero}</a>
             </button>`
             }
-
             let linkLista = document.querySelectorAll(".linkLista")
             let arrayLista = Array.from(linkLista)
-
             for (const boton of arrayLista) {
                 boton.onclick = function() {
                     this.style.background = "navy"
@@ -43,11 +34,8 @@ botonGenerar.onclick = function() {
             }
         }
     }
-
-
 }
-
-botonResetear.onclick = function() {
+btnResetear.onclick = function() {
     resetear()
     inputNumeros.value = ""
     inputMensaje.value = ""
