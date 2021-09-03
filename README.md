@@ -8,7 +8,3 @@ Generador de links whatsAppWeb múltiples
 - Al usarlos abre una ventana de whatsApp Web en el navegador, teniendo instalado el programa de WP en el sistema operativo funciona mejor y mas rápido ya que evita tener que volver a cargar la sesion de WP Web en cada pestaña nueva
 - Los botones que ya fueron clickeados cambian de color
 
-
-
-* Para reutilizar el código con otro prefijo de país solamente deben modificar la constante urlUno
-
